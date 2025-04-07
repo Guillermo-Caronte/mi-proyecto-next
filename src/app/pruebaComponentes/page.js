@@ -1,8 +1,12 @@
+import LoginButton from "../components/buttons/loginButton";
+import BlueText from "../components/titles/blueText";
+
 export default function Page() {
   return (
     <div>
-      <h1>Ruta Estatica</h1>
-      <p>Esta es una ruta estática en Next.js</p>
+      <BlueText>Texto azul</BlueText>
+      <p>Esto NO es un texto azul pero lo de arriba si</p>
+      <LoginButton />
     </div>
   );
 }
