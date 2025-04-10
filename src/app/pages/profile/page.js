@@ -1,4 +1,4 @@
-import MainButton from "../components/buttons/mainButton";
+import MainButton from "@/app/components/buttons/mainButton";
 
 export default function Perfil() {
 
