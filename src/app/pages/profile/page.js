@@ -1,20 +1,20 @@
-"use client"
+
 import MainButton from "@/app/components/buttons/mainButton"
 
 export default function Perfil() {
     let edad = 20
+    let nombre = "Juan"
 
-    const sumarEdad = () => {
-        const nuevaEdad = edad + 1
-        setEdad(nuevaEdad)
-        alert(`La edad es: ${nuevaEdad}`)
-    }
+    edad = edad+50
 
     return (
         <>
             <div>Nombre: {nombre}</div>
             <div>Edad: {edad}</div>
-            <MainButton onClick={sumarEdad}>Sumar edad</MainButton>
+            {/* <MainButton onClick={() => alert("Hola")}>
+                Click me
+            </MainButton> */}
+            <MainButton >No hago nada</MainButton>
         </>
     )
 }
