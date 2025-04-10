@@ -1,9 +1,8 @@
 import { pool } from '@/app/lib/db';
 
-        // Example query
 export async function getData() {
   try {
-    const [rows] = await pool.query('SELECT * FROM Clientes');
+    const [rows] = await pool.query('SELECT * FROM Albanyil');
     return rows;
   } catch (error) {
     console.error('Error executing query:', error);
