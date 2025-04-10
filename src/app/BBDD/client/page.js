@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-export default function Cliente() {
+export default function Client() {
   const [clientes, setClientes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

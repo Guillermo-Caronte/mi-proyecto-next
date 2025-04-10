@@ -1,9 +1,8 @@
-import { getData } from "@/app/server/select";
+import { getData } from "@/app/api/functions/select";
 import styles from "./dbPrueba.module.css"
 
-export default async function DbPrueba() {
+export default async function Server() {
   const data = await getData();
-  console.log(data);
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Base de datos de clientes</h1>

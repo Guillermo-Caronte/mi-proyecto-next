@@ -1,5 +1,7 @@
 import { pool } from '@/app/api/lib/db';
 import { NextResponse } from 'next/server';
+// Next response sirve para enviar respuestas a las peticiones desde una API
+
 
 export async function GET() {
   try {
