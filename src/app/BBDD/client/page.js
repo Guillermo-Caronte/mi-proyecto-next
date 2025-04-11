@@ -31,20 +31,24 @@ export default function Client() {
     if (!confirm('¿Estás seguro de que deseas eliminar este cliente?')) {
       return;
     }
-
+  
     setDeletingId(codigoCliente);
-
+  
     try {
-      const response = await fetch(`/api/deleteUser?codigo=${codigoCliente}`, {
-        method: 'DELETE',
+      const response = await fetch('/api/deleteUser', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ codigoCliente }),
       });
-
+  
       const data = await response.json();
-
+  
       if (!response.ok) {
         throw new Error(data.error || 'Error al eliminar el cliente');
       }
-
+  
       setClientes(clientes.filter(cliente => cliente.CODIGOCLIENTE !== codigoCliente));
       alert('Cliente eliminado con éxito');
     } catch (err) {

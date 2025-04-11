@@ -5,7 +5,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   try {
-    const [rows] = await pool.query('SELECT * FROM clientes');
+    const [rows] = await pool.query('SELECT * FROM Clientes');
     return NextResponse.json(rows);
   } catch (error) {
     console.error('Error fetching users:', error);
