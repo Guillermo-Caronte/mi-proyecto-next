@@ -5,16 +5,16 @@
   --foreground: #171717;
 }
 
-@theme inline {
+:root {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: white) {
   :root {
-    --background: #0a0a0a;
+    --background: #ededed;
     --foreground: #ededed;
   }
 }
@@ -23,4 +23,90 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 57px;
+  left: 0;
+  width: 250px;
+  height: 85.5%;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #ddd;
+  box-shadow: 4px 0px 8px -2px #978b8b;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 20px 10px 50px;  /* Agrega espacio extra a la izquierda para la imagen */
+  background-image: url('/images/buscar.png');
+  background-repeat: no-repeat;
+  background-position:7px center;  /* Alinea la imagen en el centro vertical y en la izquierda */
+  background-size: 35px 30px;  /* Tamaño de la imagen */
+  border-radius: 5px;
+  font-size: 16px;
+}
+.search-input::placeholder{
+  color:black;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 15px 0;
+}
+
+.menu li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 0;
+  display: flex;
+  gap:15px;
+  align-items: center;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+.search-input:hover{
+  background-color: #FFE9E9;
+}
+.menu li a:hover {
+  background-color: #FFE9E9;
+}
+
+/* Ajustar el contenido para que no quede detrás del menú lateral */
+body {
+  display: flex;
+}
+
+main {
+  margin-left: 250px; /* Deja espacio para el menú lateral */
+  padding: 20px;
+  width: calc(100% - 250px); /* Asegura que el contenido no se desborde */
+} 
+
+.cosa1 {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+}
+
+.cosaGrande {
+  display:flex;
+}
+
+.imagen{
+  margin-left:35px;
 }

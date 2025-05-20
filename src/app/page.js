@@ -1,12 +1,16 @@
+// /app/page.js
+'use client'
 
-import Hero from '@/app/components/landing/hero';
-import Features from '@/app/components/landing/features';
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
-export default function LandingPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-red-50 to-white">
-      <Hero />
-      <Features />
-    </div>
-  );
+export default function HomePage() {
+  const router = useRouter()
+
+  useEffect(() => {
+    // Redirigir automáticamente a la página de autenticación
+    router.push('/login')
+  }, [])
+
+  return null // No se renderiza nada, solo redirige
 }

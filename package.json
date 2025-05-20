@@ -1,5 +1,5 @@
 {
-  "name": "mi-proyecto-next",
+  "name": "proyectofinalnext",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,16 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google-cloud/secret-manager": "^6.0.1",
+    "@radix-ui/react-popover": "^1.1.7",
+    "autoprefixer": "^10.4.21",
+    "chart.js": "^4.4.9",
+    "clsx": "^2.1.1",
+    "google-auth-library": "^9.15.1",
+    "js-cookie": "^3.0.5",
+    "lucide-react": "^0.488.0",
     "mysql2": "^3.14.0",
     "next": "15.2.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next-auth": "^4.24.11",
+    "postcss": "^8.5.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4.1.4"
   }
 }
